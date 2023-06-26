@@ -36,9 +36,27 @@ html,body
 {
     width: 100%;
     height: 100%;
-    margin: 0px;
-    padding: 0px;
-    overflow-x: hidden; 
+    overflow-x: hidden; /* Esto anula el sscroll-behavior: smooth */
+}
+
+main{
+	background-image: linear-gradient(#f6e9d5,#f0dab8,#9f7e5b);
+	background-color: #ffffff;
+	min-height: 100vh;
+}
+
+h1{
+	padding: 2rem;
+	padding-top: 4rem;
+	font-size: 3rem;
+	text-align: center;
+	letter-spacing: 0.05rem;
+	font-weight: 900;
+}
+
+h2{
+	text-align: center;
+	font-size: 2.5rem;
 }
 
 /*------------------------------------------------------------------ HEADER Y NAV ------------------------------------------------------------------*/
@@ -214,37 +232,24 @@ nav ul li:hover .dropdown a:hover{
 	cursor: pointer;
 }
 
-/*------------------------------------------------ MAIN/GENERAL ------------------------------------------------*/
-
-main{
-	background-color: #ffffff;
-	min-height: 100vh;
-}
-
-h1, h2{
-	text-align: center;
-}
 
 /*--------------------------------------------------- INDEX ---------------------------------------------------*/
 
 .welcome h1{
 	display: inline-block;
-	padding: 4rem;
-	text-align: center;
+	padding: 4rem 1.5rem 3rem 1.5rem;
 	width: 100%;
 }
 
 .welcome p{
 	display: inline-block;
 	padding: 2rem 4rem;
-	text-align: justify;
 	font-size: 1.8rem;
 }
 
 /*MENU DE PAGINAS*/
 
 .redireccion_pages h2{
-	font-size: 2rem;
 	margin: 3rem;
 	margin-bottom: 5rem;
 }
@@ -256,37 +261,54 @@ h1, h2{
 .redireccion_pages div{
 	width: 33%;
 	text-align: center;
+	margin-bottom: 3rem;
 }
 
 .redireccion_pages a{
-	color: #000;
+	color: rgb(45, 45, 45);;
+	font-size: 1.7rem;
 }
 
 .redireccion_pages a img{
+	margin-bottom: 0.8rem;
 	border-radius: 50%;
 	padding: 0.2rem;
-	outline: 0.3rem solid black;
+	outline: 0.3rem solid rgb(45, 45, 45);;
 	max-width: 300px;
 }
 
-.redireccion_pages a img:hover{
+.redireccion_pages a:hover img{
 	border-radius: 50%;
 	padding: 0;
 	outline: 0.3rem solid black;
+}
+
+.redireccion_pages a:hover{
+	color: #000;
+	font-size: 1.7rem;
 }
 
 /*----------------------------------------------------- SERIE ------------------------------------------------------*/
 
 .sinopsis{
 	display: block;
-	background-image: linear-gradient(to top ,#03b1e7 80%,#1793b8);
+	background-image: linear-gradient(to top ,#03b1e7 80%,#1793b8,#13667f);
+}
+
+.sinopsis h1{
+	color: #ffffff;
 }
 
 .sinopsis p{
-	font-size: 1.5rem;
-	line-height: 1.7;
-	letter-spacing: 1.2;
+	color: #ffffffe2;
+	font-size: 1.8rem;
 	padding: 3rem 5rem;
+}
+
+.sinopsis span{
+	color: #ffffff;
+	font-weight: 900;
+	font-style: normal;
 }
 
 .sinopsis img{
@@ -299,9 +321,13 @@ h1, h2{
 
 /*MENU DE PERSONAJES*/
 
+.redireccion_char_art{
+	background-image: linear-gradient(#f6e9d5,#f0dab8,#9f7e5b);
+	color: rgb(45, 45, 45);
+}
+
 .redireccion_char{
-	background-image: linear-gradient(#f0dab8,#9f7e5b);
-	padding: 3rem 4rem;
+	padding: 1rem 4rem 3rem 4rem;
 	font-size: 2rem;
 	display: flex;
 	justify-content: space-around;
@@ -313,13 +339,16 @@ h1, h2{
 }
 
 .redireccion_char a{
-	color: #000;
+	color:rgb(45, 45, 45);
 	text-align: center;
 }
 
 .redireccion_char div:hover{
-	color: #ffffff;
 	padding-top: 0.3rem;
+}
+
+.redireccion_char div:hover a{
+	color: #000;
 }
 
 .redireccion_char img{
@@ -327,7 +356,7 @@ h1, h2{
 }
 
 .upbutton{
-	background-color: #6DB966;
+	background-color: #6db966b4;
 	display: inline-block;
 	width: 4rem;
 	height: 3rem;
@@ -347,6 +376,10 @@ h1, h2{
 	background-position: bottom;
 }
 
+.upbutton:hover{
+	background-color: #6db966;
+}
+
 /*PERSONAJES*/
 
 .character {
@@ -363,11 +396,9 @@ h1, h2{
 }
 .character div{
 	padding: 50px 40px;
-	/*text-align: center;*/
-	text-align: justify;
 	display: inline-block;
 	color: #FFFFFF;
-	font-size: 1.7rem;
+	font-size: 1.8rem;
 }
 
 .character h2{
@@ -387,7 +418,6 @@ h1, h2{
 }
 
 .galeria h2{
-	font-size: 2rem;
 	color: rgb(54, 54, 54);
 }
 
@@ -401,12 +431,12 @@ h1, h2{
 iframe{
 	width: 100%;
 	height: 100%;
-	/*outline: solid black 0.1rem;*/
+	outline: solid rgb(133, 114, 79) 10px;
 }
 
 .gallery{
 	width: 100%;
-	padding: 0rem 2rem;
+	padding: 1rem 2rem;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -431,11 +461,9 @@ iframe{
 /*-------------------------------------------------- BACKSTAGE ---------------------------------------------------*/
 
 .infol , .infor{
-	background-color: #FFD14A;
-	color: #0062A1;
+	color: #000000;
 	display: flex;
-	height: 40%;
-	padding: 4rem;
+	padding: 1.5rem 4rem 3rem 4rem;
 	font-size: 1.8rem;
 	justify-content: space-between;
 }
@@ -444,32 +472,42 @@ iframe{
 	object-fit: contain;
 	display: inline-block;
 	width: 35%;
-	outline: solid 0.2rem #0062A1;
+	outline: solid 0.2rem #000000;
 }
 
-.infol p , .infor p{
-	padding-top: 4rem;
+.infol p{
+	padding-top: 0.8rem;
 	width: 60%;
-	text-align: justify;
-	line-height: 1.7;
+}
+
+.infor p{
+	padding-top: 1.5rem;
+	width: 60%;
+}
+
+.infor a{
+	color: rgb(40, 40, 40);
+	text-decoration: underline;
+}
+
+.infor a:hover{
+	color: rgb(99, 99, 99);
 }
 
 /*--------------------------------------------------- REVIEWS ----------------------------------------------------*/
 
-.reception{
+/*.reception{
 	background-color: #FFD14A;
-	padding-top: 2rem;
-}
+}*/
 
 .reception h1{
 	font-size: 3rem;
-	color: #0062A1;
+	color: #000000;
 	margin-bottom: 2rem;
 }
 
 .reception h2{
-	font-size: 2.8rem;
-	color: #0062A1;
+	color: #000000;
 	margin: 2rem 0;
 }
 
@@ -487,7 +525,7 @@ iframe{
 
 .awards ul{
 	display: inline-block;
-	font-size: 1.2rem;
+	font-size: 1.3rem;
 	color: #FFD14A;
 	padding: 0.5rem 0 0.5rem 2rem;
 	width: 60%;
@@ -555,7 +593,7 @@ iframe{
 .contacto{
 	background-image: url(../images/colors.jpg);
 	background-size: cover;
-	background-position: 30%;
+	background-position: 22%;
 	
 	color: #FFFFFF;
 }
@@ -566,13 +604,11 @@ iframe{
 }
 
 .contacto article{
-	padding: 3rem 5rem 10rem 10rem;
+	padding: 1rem 5rem 10rem 5rem;
 }
 
 .contacto h1{
-	margin-bottom: 10rem;
-	font-size: 4rem;
-	letter-spacing: 1.8;
+	margin-bottom: 8rem;
 }
 
 /*FORMULARIO*/
@@ -584,6 +620,7 @@ input, textarea {
 form {
 	width: 70%;
 	background: #fff;
+	margin: auto;
 }
 
 .form-inner {
@@ -637,8 +674,12 @@ footer {
 }
 
 footer a, footer a:visited{
-	color: rgba(249, 109, 109, 0.82);
+	color: rgba(255, 98, 98, 0.82);
 	text-decoration: underline;
+}
+
+footer a:hover{
+	color: rgb(255, 34, 34);
 }
 
 
@@ -741,7 +782,6 @@ footer a, footer a:visited{
 
 	.sinopsis p{
 		padding: 2rem 3rem;
-		text-align: center;
 	}
 
 	.redireccion_char, 	.upbutton{
@@ -757,10 +797,6 @@ footer a, footer a:visited{
 		width: 100%;
 		padding: 0;
 		box-shadow: 0 -4px 0 #b9b9b9;
-	}
-
-	.character div {
-		text-align: center;
 	}
 
 	.trailer{
@@ -850,7 +886,6 @@ footer a, footer a:visited{
 
 	.infol p , .infor p{
 		width: 100%;
-		text-align: center;
 		padding: 1.5rem;
 	}
 
